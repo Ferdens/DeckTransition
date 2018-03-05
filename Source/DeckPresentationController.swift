@@ -417,18 +417,7 @@ final class DeckPresentationController: UIPresentationController, UIGestureRecog
         snapshotViewTopConstraint?.isActive = true
         snapshotViewWidthConstraint?.isActive = true
         snapshotViewAspectRatioConstraint?.isActive = true
-        let topBlurView = UIView()
-        topBlurView.translatesAutoresizingMaskIntoConstraints = false
-        topBlurView.backgroundColor = UIColor(red: 49.0 / 255.0, green: 57.0 / 255.0, blue: 88.0 / 255.0, alpha: 0.2)
-        snapshotViewContainer.addSubview(topBlurView)
-        topBlurView.topAnchor.constraint(equalTo: snapshotViewContainer.topAnchor, constant: -100).isActive = true
-        topBlurView.leadingAnchor.constraint(equalTo: snapshotViewContainer.leadingAnchor, constant: -100).isActive = true
-        topBlurView.trailingAnchor.constraint(equalTo: snapshotViewContainer.trailingAnchor, constant: 100).isActive = true
-        topBlurView.heightAnchor.constraint(equalToConstant: 250).isActive = true
-        topBlurView.alpha = 0
-        UIView.animate(withDuration: 0.2) {
-            topBlurView.alpha = 1
-        }
+
     }
     
     // MARK: - Presented view KVO + Rounded view update methods
